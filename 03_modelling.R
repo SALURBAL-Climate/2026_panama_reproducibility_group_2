@@ -6,9 +6,9 @@ library(SALURhelper)
 # Model 1
 cbt1 <- crossbasis(
   x = df$temp,
-  lag = 5,
+  lag = 7,
   argvar = list(fun = "ns", knots = quantile(df$temp, c(.5, .9))),
-  arglag = list(fun = "ns", knots = logknots(5, 2)),
+  arglag = list(fun = "ns", knots = logknots(7, 2)),
   group = as.character(df$sim_id)
 )
 
